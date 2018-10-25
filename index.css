@@ -1,4 +1,4 @@
-body{
+body,.card{
     background: #263238;
 }
 #app{
@@ -6,7 +6,7 @@ body{
     -webkit-font-smoothing : antialiased;
     -moz-osx-font-smoothing : grayscale;
     color: white;
-    margin-top: 60px;
+
 
 }
 .character-card{
