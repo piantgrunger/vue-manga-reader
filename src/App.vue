@@ -6,7 +6,7 @@
 
   <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
-  <b-navbar-brand href="#">Manga Vue</b-navbar-brand>
+  <b-navbar-brand href="#">Piant Manga Reader</b-navbar-brand>
 
   <b-collapse is-nav id="nav_collapse">
 

@@ -17,7 +17,13 @@
         props :["data"],
         computed:{
                        imageManga(){
-                         return  'http://cdn.mangaeden.com/mangasimg/'+this.data.im
+                         if (this.data.im !== null)
+                         {
+                              return  'http://cdn.mangaeden.com/mangasimg/'+this.data.im
+                         } else {
+                              return 'assets/image_not_found.jpg'
+                         }
+
                        }  
     
         },
