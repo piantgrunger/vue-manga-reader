@@ -5,9 +5,9 @@
         <b-navbar toggleable="md" type="dark" variant="danger" sticky="true">
 
   <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-
-  <b-navbar-brand href="#">Piant Manga Reader</b-navbar-brand>
-
+<router-link to="/">
+  <b-navbar-brand >Piant Manga Reader</b-navbar-brand>
+</router-link>
   <b-collapse is-nav id="nav_collapse">
 
 
@@ -15,7 +15,7 @@
     <b-navbar-nav class="ml-auto">
 
       <b-nav-form>
-        <b-form-input size="sm" class="mr-sm-2" type="text" placeholder="Search" v-model="search"/>
+        <b-form-input size="sm" class="mr-sm-2" type="text" placeholder="Search" v-model="search" v-on:change= "searchData"/>
        </b-nav-form>
 
 
@@ -25,8 +25,7 @@
   </b-collapse>
 </b-navbar>
 
-
-    <Manga   :searchWord = "search "   />
+<router-view></router-view>
     </div>
     </div>
 </template>
@@ -40,11 +39,16 @@
         data() {
             return {
                 title: 'Manga List',
-                search : '' 
+                search:''
+             
            
             }
         },
         methods: {
+            searchData(){
+                this.$router.push({name:'searchManga' ,params :{searchWord : this.search }})
+
+            }
           
         },
         components:{

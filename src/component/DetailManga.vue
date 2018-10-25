@@ -1,6 +1,8 @@
 <template>
 <div>
-<img :src="imageManga" class="card-img-top"  >
+  
+<img :src="imageManga" class="card-img-top"  v-on:click= "goToEpisode" >
+
   <div class="card-body">
 
 <h3 class="card-title">{{data.t}}</h3>
@@ -21,7 +23,7 @@
                          {
                               return  'http://cdn.mangaeden.com/mangasimg/'+this.data.im
                          } else {
-                              return 'assets/image_not_found.jpg'
+                              return '/assets/image_not_found.jpg'
                          }
 
                        }  
@@ -29,6 +31,11 @@
         },
        
 methods: {
+    goToEpisode(){
+         this.$router.push({name:'episode' ,params :{mangaId : this.data.i }})
+
+    },
+
   async getLink(){
     let response = await PostsService.downloadURL({
       imgURL : this.imageManga

@@ -46,7 +46,13 @@ import axios from 'axios'
           filteredManga(){
               let self = this;
               return this.allManga.filter(manga => {
-                  return manga.t.toLowerCase().includes(self.searchWord.toLowerCase()) || self.searchWord === ""
+                  let search = self.searchWord;
+                  if (search===undefined)
+                  {
+                      search = '' ;
+                   }
+
+                  return manga.t.toLowerCase().includes(search.toLowerCase()) || search === ""
               })
           }
       },
