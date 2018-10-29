@@ -1,8 +1,9 @@
 <template>
 <div>
   
-<img :src="imageManga" class="card-img-top"  v-on:click= "goToEpisode" >
-
+  <router-link :to="{name:'episode' ,params :{mangaId : this.data.i}}" >
+<img :src="imageManga" class="card-img-top"  >
+</router-link>
   <div class="card-body">
 
 <h3 class="card-title">{{data.t}}</h3>

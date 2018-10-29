@@ -65,9 +65,11 @@ import axios from 'axios'
     },
     
                 fetchmanga(){
-                    axios('https://www.mangaeden.com/api/list/0/')
+                    axios('https://www.mangaeden.com/api/list/0/'
+                    
+                    )
                     .then( ({ data }) =>{
-                        this.allManga = data.manga
+                        this.allManga = data.manga;
                       
                               this.filteredManga.map((item, key) => {
                                   if(this.manga.length<this.current)
