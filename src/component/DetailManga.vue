@@ -1,7 +1,7 @@
 <template>
 <div>
   
-  <router-link :to="{name:'episode' ,params :{mangaId : this.data.i}}" >
+  <router-link :to="{name:'chapter' ,params :{mangaId : this.data.i}}" >
 <img :src="imageManga" class="card-img-top"  >
 </router-link>
   <div class="card-body">
@@ -32,10 +32,7 @@
         },
        
 methods: {
-    goToEpisode(){
-         this.$router.push({name:'episode' ,params :{mangaId : this.data.i }})
 
-    },
 
   async getLink(){
     let response = await PostsService.downloadURL({

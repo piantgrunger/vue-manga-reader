@@ -23,7 +23,8 @@
     </div> 
     Chapter List:
       <div     v-for="data in episode">
-          {{data[0]}} - {{data[2]}}
+      <router-link :to="{name:'detailChapter' ,params :{mangaId : data[2]}}" >      {{data[0]}} - {{data[2]}}
+      </router-link>
 
                     
         </div>
@@ -37,7 +38,7 @@
 <script>
 import axios from 'axios'
 export default {
-           name:'Episode',
+           name:'Chapter',
            props:['mangaId'],
      
         data() {

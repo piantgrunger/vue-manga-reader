@@ -1,4 +1,4 @@
-# starbase
+# manga-reader
 
 > A Vue.js project
 

@@ -2,7 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Manga  from '../component/Manga.vue'
-import Episode from '../component/Episode.vue'
+import Chapter from '../component/Chapter.vue'
+import DetailChapter from '../component/DetailChapter.vue'
 
 
 Vue.use(Router)
@@ -16,17 +17,18 @@ var router = new Router({
       component: Manga
     },
     {
-        path:  '/episode/:mangaId',
-        component: Episode,
-        name : 'episode',
+        path:  '/chapter/:mangaId',
+        component: Chapter,
+        name : 'chapter',
         props :true
       },
     {
-        path: '/manga/:searchWord',
-        component: Manga,
-        name:'searchManga',
+        path: '/chapterlist/:chapterId',
+        component: DetailChapter,
+        name:'detailChapter',
         props: true 
       }
+    
 
  
   ]
