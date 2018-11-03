@@ -22,6 +22,13 @@ var router = new Router({
         name : 'chapter',
         props :true
       },
+      {
+        path:  '/manga/:searchWord',
+        component: Manga,
+        name : 'searchManga',
+        props :true
+      },
+  
     {
         path: '/chapterlist/:chapterId',
         component: DetailChapter,

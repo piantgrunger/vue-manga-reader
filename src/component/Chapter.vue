@@ -23,7 +23,7 @@
     </div> 
     Chapter List:
       <div     v-for="data in episode">
-      <router-link :to="{name:'detailChapter' ,params :{mangaId : data[2]}}" >      {{data[0]}} - {{data[2]}}
+      <router-link :to="{name:'detailChapter' ,params :{chapterId : data[1]}}" >      {{data[0]}} - {{data[2]}}
       </router-link>
 
                     

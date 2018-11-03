@@ -1,10 +1,13 @@
 <template>
 <div>
-  
+    TeSS
+<div  v-for="data in chapterList">
+  {{data[1]}}
                     
-        </div>
+
    
 
+</div>
 </div>
     
 </template>
@@ -25,6 +28,9 @@ export default {
                   })
 
            }
+           },
+           created(){
+               this.fetchEpisode();
            }
            
 }

@@ -35,10 +35,8 @@ import axios from 'axios'
         },
           watch: { 
       	searchWord: function(newVal, oldVal) { // watch it
-           console.log('searchWord changed: ', newVal, ' | was: ', oldVal);
-           if (newVal!=='' ||  oldVal!==''){
-                 this.loadMore();
-           } 
+                    this.loadMore();
+            
         }
           },
 
@@ -58,7 +56,7 @@ import axios from 'axios'
       },
         methods: {
            
-    loadMore () {
+    loadMore() {
       this.manga = []
       this.current += 9
       this.filteredManga.map((item, key) =>  this.manga.length < this.current ? this.manga.push(item) : '')
